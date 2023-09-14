@@ -1,6 +1,6 @@
-import random, os
+import random, os, sys
 
-DIRATUAL = os.path.dirname(os.path.abspath(__file__)) 
+DIRATUAL = os.path.dirname(__file__)
 
 # ----------------------------------------------------------------------
 def gerar_lista(quantidade:int, valor_minimo:int=1, valor_maximo:int=1000000):
@@ -18,10 +18,10 @@ def salvar_lista(nome_lista: list, nome_arquivo: str):
     boolSucesso  = False
     nome_arquivo = DIRATUAL + '\\' + nome_arquivo
 
-    nome_arquivo = open(f'{nome_arquivo}','w')
-    nome_arquivo.write(str(nome_lista))
-    dir_ar = os.path.dirname(nome_arquivo)
-    if dir_ar == DIRATUAL:
+    arquvo = open(f'{nome_arquivo}','w')
+    arquvo.write(str(nome_lista))
+    dirarq = os.path.dirname(nome_arquivo)
+    if dirarq == DIRATUAL:
         boolSucesso = True
 
     return boolSucesso
