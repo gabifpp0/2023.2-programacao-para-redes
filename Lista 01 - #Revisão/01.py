@@ -21,6 +21,10 @@ else:
 # Excrevendo a lista em um arquivo
 if retGerarLista[0] == True:
     retSalvarArquivo = funcoes.salvar_lista(retGerarLista[1], 'valores_nao_ordenados.txt')
-print(retSalvarArquivo)
+    print(retSalvarArquivo)
+else:
+    print('\nNão foi possível salvar o arquivo pois a lista não foi gerada')
 if retSalvarArquivo == True:
     print('\nArquivo Salvo com Sucesso...')
+else:
+    print('\nNão foi possível salvar o arquivo')
