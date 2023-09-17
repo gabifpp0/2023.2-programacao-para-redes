@@ -19,6 +19,7 @@ else:
 
 # ----------------------------------------------------------------------
 # Excrevendo a lista em um arquivo
+
 if retGerarLista[0] == True:
     retSalvarArquivo = funcoes.salvar_lista(retGerarLista[1], 'valores_nao_ordenados.txt')
     print(retSalvarArquivo)
