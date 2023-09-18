@@ -28,8 +28,4 @@ else:
 if retSalvarArquivo == True:
     print('\nArquivo Salvo com Sucesso...')
 else:
-<<<<<<< HEAD
     print('\nNão foi possível salvar o arquivo')
-=======
-    print('\nNão foi possível salvar o arquivo')
->>>>>>> f0a9a7746b3fdec06b8779a8ebf8c2f0fe646c4d
