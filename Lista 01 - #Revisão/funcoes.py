@@ -14,6 +14,7 @@ def gerar_lista(quantidade:int, valor_minimo:int=1, valor_maximo:int=1000000):
     return boolSucesso, lstRetorno
 
 # ----------------------------------------------------------------------
+
 def salvar_lista(nome_lista: list, nome_arquivo: str):
     boolSucesso  = False
     nome_arquivo = DIRATUAL + '\\' + nome_arquivo
