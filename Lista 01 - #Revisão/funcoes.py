@@ -75,3 +75,16 @@ def ordena_lista (nome_lista:str,metodo_ordena:str):
     else:
         print('sela')
     return boolSucesso, retorno
+
+def ordena_bubble(lista:list):
+    boolSucesso = False
+    retorno = None
+
+    size = len(lista)
+
+    for i in range(size -1):
+        for j in range(size -1):
+            if (lista[j] > lista[j + 1]):
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
+    
+    return boolSucesso, retorno
