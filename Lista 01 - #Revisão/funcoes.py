@@ -22,7 +22,7 @@ def salvar_lista(nome_lista: list, nome_arquivo: str):
     
     arquvo = (open(f'{nome_arquivo}','w')) 
     dirarq = os.path.dirname(nome_arquivo)
-    for i in range(len(nome_lista)):
+    for i in range(1,len(nome_lista)):
          arquvo.write(str(f"\n{nome_lista[i]}"))
     if dirarq == DIRATUAL:
         boolSucesso = True
@@ -51,7 +51,7 @@ def ler_arquivo (nome_arquivo:str):
     if not (tamanho == 0) or not (linhas == 0):
         if contador == linhas:
             boolSucesso = True
-            retorno = ''
+            retorno = sem_esp[1:linhas]
     else:
         boolSucesso = False
         retorno = None
@@ -65,6 +65,7 @@ def ordena_lista (nome_lista:str,metodo_ordena:str):
     retorno = None
 
     if metodo_ordena == 'Bubble':
+        deu = ordena_bubble(nome_lista)
         print('Bubble')
     elif metodo_ordena == 'Insertion':
         print('Insertion')
@@ -74,17 +75,24 @@ def ordena_lista (nome_lista:str,metodo_ordena:str):
         print('Quick')
     else:
         print('sela')
-    return boolSucesso, retorno
+    return boolSucesso, retorno, deu
 
 def ordena_bubble(lista:list):
     boolSucesso = False
     retorno = None
 
-    size = len(lista)
+    tamanho = len(lista)
 
-    for i in range(size -1):
-        for j in range(size -1):
-            if (lista[j] > lista[j + 1]):
-                lista[j], lista[j + 1] = lista[j + 1], lista[j]
-    
-    return boolSucesso, retorno
+    for contagem in range(tamanho -1):
+        for elementos in range(tamanho -1):
+            if (lista[elementos] > lista[elementos + 1]):
+                lista[elementos], lista[elementos + 1] = lista[elementos + 1], lista[elementos]
+
+            if lista[elementos] > lista[tamanho]:
+                boolsucesso = False
+                retorno = None
+            else: 
+                boolsucesso = True
+                retorno = lista
+
+    return boolsucesso, retorno
