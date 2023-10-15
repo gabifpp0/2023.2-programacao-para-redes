@@ -14,5 +14,5 @@ else:
     lendo = funcoes.ler_arquivo(arquivo)
     print(lendo)
     ordenar = str(input('Qual tipo de ordenação deseja usar? '))
-    ordenando = funcoes.ordena_lista(lendo[1],ordenar)
+    ordenando = funcoes.ordena_lista(lendo[1], ordenar)
     print(ordenando)

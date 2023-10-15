@@ -49,7 +49,7 @@ def ler_arquivo (nome_arquivo:str):
             contador += 1
     
     if not (tamanho == 0) or not (linhas == 0):
-        if contador == linhas:
+        if (contador + 1) == linhas:
             boolSucesso = True
             retorno = sem_esp[1:linhas]
     else:
